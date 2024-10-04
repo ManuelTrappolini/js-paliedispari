@@ -13,16 +13,16 @@ console.log('it works');
  function palindromeWord (word){
         let reverseWord = word.split("").reverse().join("");
         if(reverseWord === word){
-            console.log(true);
-            
+            console.log(true); 
+            return true;
         }
         else{
-            console.log(false);
-            
+            console.log(false); 
+            return false 
         }
     }
  
-   //2. creo una costante per il prompt ed invoco funzione
+   //2. creo una costante per il prompt ed invoco funzione ed eventuali alert
    
    const checkword = prompt ('inserisci una parola')
    
@@ -30,6 +30,9 @@ console.log('it works');
     alert("La parola e' palindroma ")
    }
    
+   else{
+    alert(" La parola non e' palindroma")
+   }
    
 
   
