@@ -10,23 +10,30 @@ console.log('it works');
 //  - function
 
 //.1 stabilisco funzione per far generare un numero random alla Cpu ed eventuali variabili per il prompt che serviranno dopo
-let userEvenOrOdd = prompt('scegli pari o dispari')
-let user_number = Number(prompt('inserisci un numero'))
- 
+/* let userEvenOrOdd = prompt('scegli pari o dispari')
+let user_number = Number(prompt('inserisci un numero')) */
 
-function randomNumerCpu(Cpu){
-    let numbCpu = Math.floor((Math.random() * 5) + 1)
-    console.log(numbCpu);
+function userNumber(number){
+   let chooseNumber = Number(prompt('inserisci un numero da 1 a 5'))
+   return chooseNumber
+}
+
+function randomNumberCpu(){
+    let numbRandomCpu = Math.floor((Math.random() * 5) + 1)
+    console.log(numbRandomCpu);
+    return numbRandomCpu
 }
 //2 creo una funzione per sommare il numero dell'utente al numero del cpu e verificare se sia pari o dispari
-function evenOrOdd(sum){
-    let numbersSum = randomNumerCpu + user_number
-    if(numbersSum % 2 === 0){
+function is_even () {
+        let numbersSum = randomNumberCpu() + userNumber;
+        if(numbersSum % 2 === 0){
         console.log( 'Even');
-        
+        return even
+        }
     }
-    else{
+        else{
         console.log('Odd');
-        
+        return odd
     }
-}
+
+
