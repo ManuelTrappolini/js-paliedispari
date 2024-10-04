@@ -25,15 +25,15 @@ function randomNumberCpu(){
 }
 //2 creo una funzione per sommare il numero dell'utente al numero del cpu e verificare se sia pari o dispari
 function is_even () {
-        let numbersSum = randomNumberCpu() + userNumber;
+        let numbersSum = randomNumberCpu() + userNumber();
         if(numbersSum % 2 === 0){
         console.log( 'Even');
         return even
         }
-    }
+    
         else{
         console.log('Odd');
         return odd
     }
-
+}
 
