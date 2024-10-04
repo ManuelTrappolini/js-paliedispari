@@ -10,10 +10,10 @@ console.log('it works');
 //  - function
 
 //.1 stabilisco funzione per far generare un numero random alla Cpu ed eventuali variabili per il prompt che serviranno dopo
-/* let userEvenOrOdd = prompt('scegli pari o dispari')
-let user_number = Number(prompt('inserisci un numero')) */
 
-function userNumber(number){
+
+  
+function userNumber(){
    let chooseNumber = Number(prompt('inserisci un numero da 1 a 5'))
    return chooseNumber
 }
@@ -21,19 +21,43 @@ function userNumber(number){
 function randomNumberCpu(){
     let numbRandomCpu = Math.floor((Math.random() * 5) + 1)
     console.log(numbRandomCpu);
-    return numbRandomCpu
+    return numbRandomCpu;
 }
-//2 creo una funzione per sommare il numero dell'utente al numero del cpu e verificare se sia pari o dispari
-function is_even () {
-        let numbersSum = randomNumberCpu() + userNumber();
-        if(numbersSum % 2 === 0){
-        console.log( 'Even');
-        return even
-        }
-    
-        else{
-        console.log('Odd');
-        return odd
-    }
-}
+//.2 creo una funzione per chiedere all'utente pari o dispari,sommare il numero dell'utente al numero del cpu e verificare se sia pari o dispari e dichiarare vincitore di conseguenza
+function is_even_or_odd () {
+    let askToUser = prompt('Scegli pari o dispari')
+    if(askToUser === 'pari'){
+      let chooseNumber = userNumber()
+      let numbersSum = randomNumberCpu() + chooseNumber;
+      console.log(`La somma è: ${numbersSum}`)
+      if(numbersSum % 2 === 0){
+        console.log('Even');
+        alert("Il risultato e' Pari! Complimenti! Hai vinto!!")
+        return 'Even'
 
+      } else {
+        console.log('Odd');
+        let odd = alert("Il risultato e' Dispari, Mi Dispiace hai perso...")
+        return 'Odd'
+        
+      }
+    } else if(askToUser === 'dispari') {
+      let chooseNumber = userNumber()
+      let numbersSum = randomNumberCpu() + chooseNumber;
+      console.log(`La somma è: ${numbersSum}`)
+      if(numbersSum % 2 !== 0){
+        alert("Il risultato e' Dispari, Complimenti! Hai vinto!!")
+        return 'Odd'
+        
+      } else {
+        alert("Il risultato e' pari, Mi Dispiace hai perso...")
+        return 'Even'
+      }
+    } else {
+      alert("Inserisci 'pari' o 'dispari'")
+      return null
+    }
+  }
+
+
+  is_even_or_odd()
