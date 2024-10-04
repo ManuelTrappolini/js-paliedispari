@@ -8,6 +8,7 @@ console.log('it works');
  //-prompt
  
 //1. preparazione dati - stabilisco funzione per vedere se una parola e' palindroma usando i metodi split reverse e join
+//   se i caratteri della parola sono uguali a quelli contrari restituisce true altrimenti false
 
 
  function palindromeWord (word){
@@ -22,9 +23,9 @@ console.log('it works');
         }
     }
  
-   //2. creo una costante per il prompt ed invoco funzione ed eventuali alert
+   //2. creo una costante per il prompt per l'utente, invoco funzione richiamando la costante del prompt ed eventuali alert
    
-   const checkword = prompt ('inserisci una parola')
+   const checkword = prompt ('inserisci una parola per verificare sia palindroma')
    
    if(palindromeWord(checkword)){
     alert("La parola e' palindroma ")
